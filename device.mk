@@ -34,17 +34,15 @@ PRODUCT_PACKAGES += \
     ueventd.tiger6.rc
 
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/audio_policy.conf:system/etc/audio_policy.conf \
-    device/lge/tiger6/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    device/lge/tiger6/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/lge/tiger6/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/lge/tiger6/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/lge/tiger6/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/media_profiles.xml:system/etc/media_profiles.xml \
-    device/lge/tiger6/media_codecs.xml:system/etc/media_codecs.xml \
-    device/lge/tiger6/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
-
-PRODUCT_COPY_FILES += \
-    device/lge/tiger6/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/lge/tiger6/audio_platform_info.xml:system/etc/audio_platform_info.xml
+    device/lge/tiger6/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/lge/tiger6/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/lge/tiger6/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -80,18 +78,18 @@ PRODUCT_COPY_FILES += \
 
 # For GPS
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/sec_config:system/etc/sec_config
+    device/lge/tiger6/configs/sec_config:system/etc/sec_config
 
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4356/device-bcm.mk)
 
 # WiFi cal NVRAM file
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+    device/lge/tiger6/configs/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
 
 # For SPN display
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/spn-conf.xml:system/etc/spn-conf.xml
+    device/lge/tiger6/configs/spn-conf.xml:system/etc/spn-conf.xml
 
 # This device is 560dpi.  However the platform doesn't
 # currently contain all of the bitmaps at 560dpi density so
@@ -289,7 +287,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/gps.conf:system/etc/gps.conf
+    device/lge/tiger6/configs/gps.conf:system/etc/gps.conf
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -321,10 +319,7 @@ PRODUCT_COPY_FILES += \
 
 # NFCEE access control
 PRODUCT_COPY_FILES += \
-    device/lge/tiger6/nfcee_access.xml:system/etc/nfcee_access.xml
-
-# Enable for volte call
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
+    device/lge/tiger6/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.hwui.texture_cache_size=72 \

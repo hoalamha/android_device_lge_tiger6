@@ -58,9 +58,11 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # handled by the hardware composer
 MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 
-BOARD_EGL_CFG := device/lge/tiger6/egl.cfg
+BOARD_EGL_CFG := device/lge/tiger6/configs/egl.cfg
 
+# Audio
 BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
 # Wifi related defines
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
@@ -91,7 +93,6 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 0000000
 TARGET_USES_ION := true
 TARGET_HW_DISK_ENCRYPTION := false
-TARGET_CRYPTFS_HW_PATH := device/lge/tiger6/cryptfs_hw
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -166,4 +167,4 @@ BOARD_HARDWARE_CLASS := \
 
 USE_CLANG_PLATFORM_BUILD := true
 
--include vendor/motorola/shamu/BoardConfigVendor.mk
+-include vendor/lge/tiger6/BoardConfigVendor.mk
