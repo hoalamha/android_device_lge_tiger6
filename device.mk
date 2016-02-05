@@ -27,10 +27,6 @@ PRODUCT_COPY_FILES += \
     device/lge/tiger6/fstab.tiger6:root/fstab.tiger6 \
     device/lge/tiger6/ueventd.tiger6.rc:root/ueventd.tiger6.rc
 
-# Input device files for tiger6
-PRODUCT_COPY_FILES += \
-    device/lge/tiger6/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
-
 PRODUCT_COPY_FILES += \
     device/lge/tiger6/audio_policy.conf:system/etc/audio_policy.conf \
     device/lge/tiger6/audio_effects.conf:system/vendor/etc/audio_effects.conf
@@ -355,16 +351,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     power.apq8084
-
-# Delegation for OEM customization
-PRODUCT_OEM_PROPERTIES := \
-    ro.config.ringtone \
-    ro.config.notification_sound \
-    ro.config.alarm_alert \
-    ro.config.wallpaper \
-    ro.config.wallpaper_component \
-    ro.oem.* \
-    oem.*
 
 # Copy the qcril.db file from qcril to system. Useful to get the radio tech family for the camped operator
 PRODUCT_COPY_FILES += \

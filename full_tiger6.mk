@@ -21,6 +21,6 @@ PRODUCT_NAME := cm_tiger6
 PRODUCT_DEVICE := tiger6
 PRODUCT_BRAND := LGE
 PRODUCT_MODEL := G3 Cat6
-PRODUCT_MANUFACTURER := lge
+PRODUCT_MANUFACTURER := LGE
 
 $(call inherit-product, device/lge/tiger6/device.mk)

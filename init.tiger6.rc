@@ -623,3 +623,7 @@ service atfwd /system/bin/ATFWD-daemon
 service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
+
+service atd /system/bin/atd /dev/ttyGS0 /dev/smd0
+    socket atd stream 0660 system inet
+    class main
