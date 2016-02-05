@@ -20,12 +20,18 @@
 # Everything in this directory will become public
 
 
-PRODUCT_COPY_FILES += \
-    device/lge/tiger6/init.tiger6.rc:root/init.tiger6.rc \
-    device/lge/tiger6/init.tiger6.power.rc:root/init.tiger6.power.rc \
-    device/lge/tiger6/init.tiger6.usb.rc:root/init.tiger6.usb.rc \
-    device/lge/tiger6/fstab.tiger6:root/fstab.tiger6 \
-    device/lge/tiger6/ueventd.tiger6.rc:root/ueventd.tiger6.rc
+# ETC scripts
+PRODUCT_PACKAGES += \
+    init.qcom.bt.sh
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.tiger6 \
+    init.tiger6.rc \
+    init.tiger6.power.rc \
+    init.tiger6.usb.rc \
+    init.recovery.tiger6.rc \
+    ueventd.tiger6.rc
 
 PRODUCT_COPY_FILES += \
     device/lge/tiger6/audio_policy.conf:system/etc/audio_policy.conf \

@@ -136,7 +136,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-TARGET_RECOVERY_FSTAB = device/lge/tiger6/fstab.tiger6
+TARGET_RECOVERY_FSTAB = device/lge/tiger6/rootdir/etc/fstab.tiger6
 # Ensure f2fstools are built
 TARGET_USERIMAGES_USE_F2FS := true
 
