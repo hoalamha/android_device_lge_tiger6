@@ -83,10 +83,6 @@ PRODUCT_COPY_FILES += \
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4356/device-bcm.mk)
 
-# WiFi cal NVRAM file
-PRODUCT_COPY_FILES += \
-    device/lge/tiger6/configs/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
-
 # For SPN display
 PRODUCT_COPY_FILES += \
     device/lge/tiger6/configs/spn-conf.xml:system/etc/spn-conf.xml
